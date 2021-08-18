@@ -1,0 +1,30 @@
+#单节点,正确
+#应用名称及验证账号
+spring: 
+  application: 
+    name: eureka
+  security: 
+    user: 
+      name: root
+      password: root
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+#设置服务注册中心的URL，用于client和server端交流
+    service-url:
+      defaultZone: http://root:root@eureka-7900:7900/eureka/
+  server: 
+    #关闭自我保护
+    enable-self-preservation: false
+    #清理间隔时间
+    eviction-interval-timer-in-ms: 5000
+  instance:
+    hostname: eureka-7900
+logging:
+  level:
+    root: info
+
+server: 
+  port: 7900
+

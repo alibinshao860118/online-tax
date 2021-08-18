@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>bb-test-Vue.js</title>
+
+
+        <script type="text/javascript" src="./webjars/vue/2.6.14/vue.js" ></script>
+        <script type="text/javascript" src="vue.min.js" ></script>
+
+    </head>
+    <body>
+    <div id="app">
+        <h1>{{title}}</h1>
+
+<!--        <table>-->
+<!--            <tr v-for = "(item, i) in products"><td>{{item.name}}</td><td>{{item.stock}}</td>-->
+<!--            <td><button onclick="remove1(i)">删除</button></td>-->
+<!--            </tr>-->
+
+
+<!--        </table>-->
+
+    </div>
+    <script>
+        var vm = new Vue({
+            el: "#app",//css选择器
+            data: {
+                title: "xitong",
+                products: [{name: "iphos", stock: 5},
+                    {name: "huawei", stock: 15},
+                    {name: "xiaomi", stock: 25}
+                ],
+                methods: {
+                    remove(i) {
+                        this.products.splice(i, 1);
+                    },
+                },
+            },
+        });
+      function remove1(i) {
+          vm.remove(i);
+      }
+    </script>
+    </body>
+</html>
