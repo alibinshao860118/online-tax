@@ -4,11 +4,11 @@ server:
 
 spring:
   redis:
-    host: 192.168.1.119
+    host: 192.168.140.128
     password:
     port: 6379
   datasource:
-    url: jdbc:mysql://92.168.1.119:3306/online-taxi?&useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false&allowMultiQueries=true&useSSL=false&zeroDateTimeBehavior=convertToNull
+    url: jdbc:mysql://192.168.140.128:3306/online-taxi?&useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false&allowMultiQueries=true&useSSL=false&zeroDateTimeBehavior=convertToNull
     username: dev1101
     password: dev1101
     type: com.alibaba.druid.pool.DruidDataSource
